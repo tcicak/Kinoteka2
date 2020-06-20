@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3D6DD31-43DC-4D4E-A9A9-C7A053202D2B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kinoteka</RootNamespace>
+    <AssemblyName>Kinoteka</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Film.cs" />
+    <Compile Include="FrmDodajFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajFilm.Designer.cs">
+      <DependentUpon>FrmDodajFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajKino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajKino.Designer.cs">
+      <DependentUpon>FrmDodajKino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFilm.Designer.cs">
+      <DependentUpon>FrmFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKino.Designer.cs">
+      <DependentUpon>FrmKino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kino.cs" />
+    <Compile Include="Korisnik.cs" />
+    <Compile Include="FrmPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPocetna.Designer.cs">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrijava.Designer.cs">
+      <DependentUpon>FrmPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistracija.Designer.cs">
+      <DependentUpon>FrmRegistracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRezervacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRezervacija.Designer.cs">
+      <DependentUpon>FrmRezervacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Racun.cs" />
+    <Compile Include="RepozitorijFilmova.cs" />
+    <Compile Include="RepozitorijKina.cs" />
+    <Compile Include="RepozitorijKorisnika.cs" />
+    <Compile Include="Sjedalo.cs" />
+    <EmbeddedResource Include="FrmDodajFilm.resx">
+      <DependentUpon>FrmDodajFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajKino.resx">
+      <DependentUpon>FrmDodajKino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFilm.resx">
+      <DependentUpon>FrmFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKino.resx">
+      <DependentUpon>FrmKino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPocetna.resx">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrijava.resx">
+      <DependentUpon>FrmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FrmRegistracija.resx">
+      <DependentUpon>FrmRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRezervacija.resx">
+      <DependentUpon>FrmRezervacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseAccess\DatabaseAccess.csproj">
+      <Project>{423b700c-72b0-41f9-8a94-c3cd47372156}</Project>
+      <Name>DatabaseAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
