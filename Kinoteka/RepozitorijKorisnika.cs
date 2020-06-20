@@ -12,7 +12,7 @@ namespace Kinoteka
     public class RepozitorijKorisnika
     {
 
-        // Metoda koja dodaje korisnika u repozitorij
+        // Metoda koja dodaje korisnika u repozitorijjjjjjjj
         public int DodajKorisnika (Korisnik noviKorisnik)
         {
             Database.Instance.Connect();
